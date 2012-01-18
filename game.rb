@@ -1,13 +1,5 @@
 require 'sinatra'
 
-# TODO
-# Layout c/ dicuss
-# Forma de dois users jogarem ao mesmo tempo
-# login via Facebook, Github e Twitter
-# Criar um middleware para descobrir a origim do jogar e setar o locale.
-# Convidar alguém para jogar
-
-
 configure do
   set :views, File.dirname(__FILE__) + '/assets/views'
   set :session_secret, 'klebervirgilio.com'
