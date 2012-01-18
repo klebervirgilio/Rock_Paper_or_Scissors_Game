@@ -10,18 +10,21 @@ var App = {
 	
 	init: function() {
 		this.clear();
+		return false;
 	},
 	
 	clear: function() {
 		$('p#move-choosen').html('').hide();
 		$('div#right').html('?');
 		$('div#left').html('?');
+		return false;
 	},
 	
 	play: function(playerThrow) {
 		this.playerThrow = playerThrow;
 		this.uiPreComputerTurn();
 		this.computerTurn();
+		return false;
 	},
 	
 	uiPreComputerTurn :function(func) {
