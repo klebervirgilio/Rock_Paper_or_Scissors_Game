@@ -1,7 +1,7 @@
 require 'sinatra'
+require 'json'
 
 configure do
-  set :views, File.dirname(__FILE__) + '/assets/views'
   set :session_secret, 'klebervirgilio.com'
   enable :sessions
 end
@@ -12,7 +12,7 @@ before do
   @throws = @defeat.keys
 end
 
-before(/\/(throw|me|about)/) do
+before(/\/(me|about)/) do
   content_type :txt
 end
 
@@ -29,6 +29,7 @@ get '/console' do
 end
 
 get '/throw/:type' do
+  content_type :json
   
   player_throw = params[:type].to_sym
   halt 403, "You must throw one of the following: #{@throws}" unless @throws.include?(player_throw)
@@ -37,19 +38,23 @@ get '/throw/:type' do
   tied    = "You tied with the computer. Try again!"
   winner  = "Nicely done; #{player_throw} beats #{computer_throw}!"
   loser   = "Ouch; #{computer_throw} beats #{player_throw}. Better luck next time!"
+  status = ''
   
   return_ = if player_throw == computer_throw
+    status = 'tie'
     tied
   elsif computer_throw == @defeat[player_throw]
+    status = 'won'
     winner
   else
+    status = 'lose'
     loser
   end
   
   session[:counter].nil? ? session[:counter] = 1 : session[:counter] = (session[:counter] + 1)
    
-  etag return_
-  return_
+  # etag return_
+  {:text => return_, :computerThrow => computer_throw, :status => status}.to_json
 end
 
 get '/reset' do

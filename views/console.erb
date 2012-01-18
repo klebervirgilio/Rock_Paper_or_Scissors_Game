@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Rock, Paper or Scissors Game</title>
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+		<link href="/assets/stylesheets/screen.css" media="screen" rel="stylesheet" type="text/css">
+	</head>
+	
+	<body>
+		
+		<div id="wrapper">
+			<h1>Rock, Paper or Scissors Game</h1>
+			<h2>You vs. Computer</h2>
+			
+			<div id="left">
+				<span id="player-move"> ? </span>
+			</div>
+			
+			<div id="right">
+				<span id="computer-move"> ? </span>
+			</div>
+			
+			<div style="clear:both;"></div>
+			
+			<div id="move"> 
+				<a class="scissors" data-move="scissors">  ✄ </a>
+				<a class="rock" data-move="rock">	  ✺ </a>
+				<a class="paper" data-move="paper">	  ❏ </a>
+				<p id="move-choosen"> Paper </p>
+			</div>
+			
+			<div id="notification">
+				Make a choice!
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="/assets/javascripts/app.js"></script>
+	</body>
+</html>

@@ -1,0 +1,65 @@
+body {
+	background-color:#FDFCDC;
+	font-family: 'Ubuntu', sans-serif;
+	color:#838B8B;
+	text-shadow: 2px 2px #fff;
+}
+
+h1, h2, div#wrapper div#left, div#wrapper div#right, div#move, div#notification {text-align:center;}
+
+div#wrapper div#left, div#wrapper div#right {
+	font-size:150px;
+}
+
+div#wrapper{
+	width:960px;
+	margin:0 auto 15px auto;
+}
+
+div#wrapper div#left {
+	float: left;
+/*	border: 1px solid #999;*/
+	border-right: 8px dotted #838B8B;
+	width: 473px;
+	height: 200px;
+}
+
+div#wrapper div#right {
+	float: right;
+/*	border: 1px solid #ff0;*/
+	width: 470px;
+	height: 200px;
+}
+
+div#move{
+	margin-top:	20px;
+	padding:10px;
+	font-size:50px;
+}
+
+div#move span {font-size:20px;}
+
+div#move a:hover{
+	cursor:pointer;
+	font-size:70px;	
+}
+
+div#notification {
+	margin-top:	10px;
+	font-size:40px;	
+}
+
+div#notification.won {
+	color:#009900;
+	text-shadow: 2px 2px #00CC00;
+}
+
+div#notification.lose {
+	color:#990000;
+	text-shadow: 2px 2px #CC0000;
+}
+
+div#notification.tie {
+	color:#FF9900;
+	text-shadow: 2px 2px #FFCC00;
+}
