@@ -1,0 +1,16 @@
+environment: production
+# chdir: /var/www/acoplet/current/
+chdir: /var/www/ruby/rock_scissors_paper/current
+address: 127.0.0.1
+user: git
+group: git
+port: 4567
+# pid: /home/acoplet/www/acoplet/current/tmp/thin.pid
+pid: /var/www/ruby/rock_scissors_paper/current/tmp/thin.pid
+# rackup: /home/acoplet/www/acoplet/current/config.ru
+rackup: /var/www/ruby/rock_scissors_paper/current/config.ru
+log: /var/www/ruby/rock_scissors_paper/current/current/log/thin.log
+max_conns: 1024
+timeout: 30
+max_persistent_conns: 512
+daemonize: true
