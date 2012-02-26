@@ -1,6 +1,7 @@
-require 'sinatra'
+require 'sinatra/base'
 require 'json'
 
+class Game < Sinatra::Base
 configure do
   set :session_secret, 'klebervirgilio.com'
   enable :sessions
@@ -92,4 +93,5 @@ end
 
 error do
   ":'("
+end
 end
