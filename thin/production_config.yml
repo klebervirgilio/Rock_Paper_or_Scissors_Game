@@ -3,7 +3,7 @@ chdir: /home/kleber/apps/ruby/Rock_Paper_or_Scissors_Game/current
 address: 127.0.0.1
 user: git
 group: git
-port: 4567
+port: 8080
 pid: /home/kleber/apps/ruby/Rock_Paper_or_Scissors_Game/current/tmp/thin.pid
 rackup: /home/kleber/apps/ruby/Rock_Paper_or_Scissors_Game/current/config.ru
 log: /home/kleber/apps/ruby/Rock_Paper_or_Scissors_Game/current/log/thin.log
